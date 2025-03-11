@@ -35,20 +35,22 @@ CREATE TABLE `mensaje` (
   `contenido` varchar(300) NOT NULL DEFAULT '',
   `fecha_hora` datetime NOT NULL DEFAULT current_timestamp(),
   `entrenaba` varchar(50) NOT NULL DEFAULT 'No aun',
-  `email` varchar(50) DEFAULT NULL
+  `email` varchar(50) DEFAULT NULL,
+ `edad` int(11) NOT NULL
+
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_bin;
 
 --
 -- Dumping data for table `mensaje`
 --
 
-INSERT INTO `mensaje` (`id_mensaje`, `nombre`, `apellido`, `numero_celular`, `whatsapp`, `contenido`, `fecha_hora`, `entrenaba`, `email`) VALUES
-(1, 'Pablo', 'Elias', '2352342', 'no', 'hola...', '2024-07-10 06:45:08', 'No aun', NULL),
-(2, 'Mario', 'Bros', '43543334', 'si', 'hola quiero consultar...', '2024-07-10 06:45:08', 'No aun', NULL),
-(4, 'Pedro', 'Sosa', NULL, 'no', 'Hola, cuanto es el plan mensual...', '2024-07-10 03:52:47', 'Aun entreno', NULL),
-(6, 'Marina', 'Sotelo', '43543332', 'si', 'hola quiero consultar...', '2024-07-10 03:54:50', 'No aun', NULL),
-(8, 'Julio', 'Lopez', '4354333', 'no', 'hola quiero consultar...', '2024-07-10 05:49:46', 'Aun si', 'julio@gmail.com'),
-(9, 'Pepe', 'Argento', '354232346', 'si', 'hola...', '2024-07-10 06:45:08', 'No aun', NULL);
+INSERT INTO `mensaje` (`id_mensaje`, `nombre`, `apellido`, `numero_celular`, `whatsapp`, `contenido`, `fecha_hora`, `entrenaba`, `email`,`edad`) VALUES
+(1, 'Pablo', 'Elias', '2352342', 'no', 'hola...', '2024-07-10 06:45:08', 'No aun', NULL,27),
+(2, 'Mario', 'Bros', '43543334', 'si', 'hola quiero consultar...', '2024-07-10 06:45:08', 'No aun', NULL,28),
+(4, 'Pedro', 'Sosa', NULL, 'no', 'Hola, cuanto es el plan mensual...', '2024-07-10 03:52:47', 'Aun entreno', NULL,30),
+(6, 'Marina', 'Sotelo', '43543332', 'si', 'hola quiero consultar...', '2024-07-10 03:54:50', 'No aun', NULL,33),
+(8, 'Julio', 'Lopez', '4354333', 'no', 'hola quiero consultar...', '2024-07-10 05:49:46', 'Aun si', 'julio@gmail.com',22),
+(9, 'Pepe', 'Argento', '354232346', 'si', 'hola...', '2024-07-10 06:45:08', 'No aun', NULL,25);
 
 -- --------------------------------------------------------
 
