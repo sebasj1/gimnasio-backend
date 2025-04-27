@@ -2,9 +2,9 @@
 -- version 5.2.1
 -- https://www.phpmyadmin.net/
 --
--- Host: mysql-proyectois2.alwaysdata.net
--- Generation Time: Mar 09, 2025 at 04:55 PM
--- Server version: 10.6.18-MariaDB
+-- Host: mysql-dbpro.alwaysdata.net
+-- Generation Time: Apr 27, 2025 at 09:09 PM
+-- Server version: 10.11.11-MariaDB
 -- PHP Version: 7.4.33
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
@@ -18,7 +18,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `proyectois2_training_center`
+-- Database: `dbpro_training_center`
 --
 
 -- --------------------------------------------------------
@@ -118,6 +118,19 @@ CREATE TABLE `turno` (
   `id_usuario` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
+--
+-- Dumping data for table `turno`
+--
+
+INSERT INTO `turno` (`id_turno`, `dia`, `hora`, `id_usuario`) VALUES
+(5, 'Miercoles', '12:00', 23),
+(6, 'Viernes', '12:00', 23),
+(7, 'Viernes', '15:00', 23),
+(8, 'Jueves', '12:00', 23),
+(9, 'Sábado', '16:00', 23),
+(10, 'Miercoles', '15:00', 23),
+(11, 'Jueves', '14:00', 23);
+
 -- --------------------------------------------------------
 
 --
@@ -137,6 +150,15 @@ CREATE TABLE `usuario` (
   `id_tipo_plan` int(11) DEFAULT NULL,
   `id_tipo_usuario` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_bin;
+
+--
+-- Dumping data for table `usuario`
+--
+
+INSERT INTO `usuario` (`id_usuario`, `nombre`, `apellido`, `numero_documento`, `direccion`, `fecha_nacimiento`, `telefono`, `email`, `password`, `id_tipo_plan`, `id_tipo_usuario`) VALUES
+(23, 'Matias', 'Jara', '40333433', 'mi casa 788', '1997-10-25', '', 'matias@gmail.com', '$2a$08$2gnQe7ei/R0wSM83nKQsA.xr925aCkOOpg4QofCutiFm9uiugB.US', 3, 1),
+(24, 'Jorge', 'Perez', '3543432', 'mi casa 3334', '1991-11-13', '', 'jorge@gmail.com', '$2a$08$cIgHhFe12H9oRH1HCoUWE./Fp.DIT5nBdmG/tKjUPpAmFPCWPjuAS', 1, 1),
+(25, 'Laura', 'Loprez', '23441211', 'mi casa', '1999-04-16', '', 'laura@gmail.com', '$2a$08$tMd1OR/AMrcygQ/WC3jMwe3h947iyH3dfqIn7bpo0CgIL29S5oIE.', 1, 1);
 
 --
 -- Indexes for dumped tables
@@ -215,13 +237,13 @@ ALTER TABLE `tipo_usuario`
 -- AUTO_INCREMENT for table `turno`
 --
 ALTER TABLE `turno`
-  MODIFY `id_turno` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_turno` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 
 --
 -- AUTO_INCREMENT for table `usuario`
 --
 ALTER TABLE `usuario`
-  MODIFY `id_usuario` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=23;
+  MODIFY `id_usuario` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=28;
 
 --
 -- Constraints for dumped tables
